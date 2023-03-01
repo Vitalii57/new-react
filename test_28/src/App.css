@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li  {
+  list-style-type: none;
+}
+
+.block-news,
+.block-advertisement,
+.block-list,
+.block-tittle,
+.block-currency,
+.logo,
+.nav,
+.advertisement,
+.block-program
+ {
+    border: 2px solid #999;
+}
+
+.App {
+  width: 48.9%;
+  /* background-color: aliceblue; */
+  margin: 0 auto;
+}
+
+
+.block-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.block-news {
+  width: 70%;
+}
+
+.block-advertisement {
+  width:30%;
+  align-items: center;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+/* -------------------------------------------------- */
+
+
+.nav {
+  margin-top: 30px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-list li:nth-child(n+2) {
+  margin-left: 8px;
+}
+
+.block-input {
+  display: flex;
+  height: 30px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: aliceblue;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.logo {
+  margin-left: -70px;
+  width: 80px;
+  height: 30px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid yellow;
+}
+.button {
+  background-color: #fff;
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* -------------------------------------------------- */
+
+
+.advertisement {
+  width: 100%;
+  height: 80px;
+  background-color: aliceblue;
+  margin-top: 30px;
+}
+.text {
+  text-align: center;
+}
+
+
+/* -------------------------------------------------- */
+
+
+.block-bottom {
+  margin-top: 30px;
+  /* justify-content:baseline; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-program {
+  width: 150px;
+  height: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .block-program:not(:nth-child(2n+1)) {
+      margin-left: 10px;
+    }
+  
+    .block-program:nth-child(n+1) {
+      margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+  .block-program:nth-child(n+2):not(:nth-child(4)) {
+      margin-left: 10px;
+    }
+
+  .block-program {
+    margin-top: 20px;
+  }
+}

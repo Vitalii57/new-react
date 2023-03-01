@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0px auto;
+}
+.card {
+  margin-top: 50px;
+  border: 2px solid  rgb(182, 190, 190);
+}
+.card-block {
+  padding: 0 30px;
+}
+.card-img {
+  height: 150px;
+  background-color: rgb(140, 148, 148)
+}
+
+.card-text,
+.card-title,
+.card-button {
+  margin-top: 20px;
+}
+.card-button {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgb(74, 74, 212);
+  width: 170px;
+  height: 40px;
+  border: none;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+}
