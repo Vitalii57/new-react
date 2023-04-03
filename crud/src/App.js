@@ -26,20 +26,16 @@ export default class App extends Component {
     this.delNotes = this.delNotes.bind(this)
   }
   
-  componentDidMount() {
+  //  componentDidMount() {
    
-      fetch("http://localhost:3000")
-      .then(resounce => resounce.json())
-      // .catch(err => console.log(err))
-      .then(result => {
-        this.setState({
-          isLoaded: true,
-          notes: result
-          
-        })
-      })
+  //     fetch("http://localhost:3000", {
+  //       method: "POST", 
+  //       headers: {"Content-Type": "application/json"}, 
+  //       body: JSON.stringify(this.state.notes)})
+  //       console.log(this.state.notes)
+  //     } 
    
-  }
+  
 
   componentWillUnmount(){}
   
@@ -58,7 +54,15 @@ export default class App extends Component {
   addNotes(note) {
     const id = this.state.notes.length + 1
     this.setState({notes: [...this.state.notes, {id, ...note}]})
-    console.log(note)
+    // console.log(note)
+    
+    return fetch(" http://localhost:7070/notes ", {
+        method: "POST", 
+        headers: {"Content-Type": "application/json"}, 
+        body: JSON.stringify(this.state.notes)
+      })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
 
   }
 
