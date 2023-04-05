@@ -6,7 +6,7 @@ export default class Notes extends Component {
   render() {
     if (this.props.notes.length > 0) {
       return (
-        <div>
+        <div className="">
           {this.props.notes.map((el) => (
             <Note onDelete={this.props.onDelete} key={el.id} note={el}/>
           ))}
